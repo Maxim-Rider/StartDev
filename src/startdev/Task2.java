@@ -18,26 +18,12 @@ class Task2 {
         int myNumber = random.nextInt(max-min+1)+min;
         System.out.println("Задумано число от "+min+" до "+max+". Угадай!");
         Scanner scanner = new Scanner(System.in);
-        int attempt = 1;
-        do{
-            int gamerNumber = scanner.nextInt();
-            if(myNumber == gamerNumber){
-                System.out.println("Ты выиграл!");
-                break;
-            }else{
-                if(attempt < 3){
-                    System.out.println("Не угадал, попробуй еще: ");
-                    if(myNumber > gamerNumber){
-                        System.out.println("(Задуманное число больше)");
-                    }else{
-                        System.out.println("(Задуманное число меньше)");
-                    }
-                }else{
-                    System.out.println("Ты проиграл. Задумано число: "+myNumber);
-                    break;
-                }
-            }
-            attempt++;
-        }while(true);
-    }
-}
+        int gamerNumber = scanner.nextInt();
+        if(myNumber == gamerNumber){
+            System.out.println("Ты выиграл!");
+        }else{
+                System.out.println("Ты проиграл. Задумано число: "+myNumber);
+       }
+    }       
+}    
+
